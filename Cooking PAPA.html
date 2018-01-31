@@ -1,0 +1,494 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<!--ltf.suensir.idv.hk-->
+	<title>Cooking PAPA</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="refresh" content="600;url=http://www.ltf.suensir.idv.hk/video.html">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<!-- /MyScript -->
+	<script src="robot/robot.js"></script>
+	<link rel="stylesheet" href="robot/robot.css"/>
+	
+	<!--/Password-->
+	        <script language="JavaScript">
+            function login(x,y){
+            if ((x=="PAPA")&&(y=="cook")) {
+            window.location="index.html#PAPA"    //code
+            }
+            else{
+                window.alert("Wrong username or password~");
+            }
+            }
+        </script>
+	<!--/waiter-->
+	<script>
+		function showMessage() {
+			window.alert("Waiter is coming~~~");
+		}
+	</script>
+</head>
+
+
+<body>
+<!-- Start of first page -->
+
+	<!--Panel-->
+	<div data-role="page" class="jqm-demos ui-responsive-panel" id="Cooking PAPA" data-title="Cooking PAPA" data-url="panel-responsive-page1">
+		<div data-role="header">
+			<h1><font size=5>Welcome to Cooking PAPA~~~</font></h1>
+			<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+			<a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>
+	</div><!-- /header -->
+	<div role="main" class="ui-content jqm-content jqm-fullwidth">
+		<div data-demo-html="#panel-responsive-page1"></div>
+	</div><!-- /content -->
+	<div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+		<ul data-role="listview">
+			<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+			<li><a href="#combo">Today's Combo</a></li>
+			<li><a href="#drinks">Beverage</a></li>
+			<li><a href="#dessert">Dessert</a></li>
+			<li><a href="#payment">Order List</a></li>
+			<li><a href="http://ltf.suensir.idv.hk/video">Promotional Video</a></li>
+		</ul>
+	</div><!-- /panel -->
+	<div data-role="panel" data-position="right" data-display="reveal" data-theme="a" id="add-form">
+		<form name="fm">
+			<h2>Manager and Chief Login</h2>
+			 <p>"(User: PAPA Password:cook)"</p>
+			 <b>User:</b><input type="text" name="usr"<br>
+			 <b>Password:</b><input type="password" name="pwd"><br>
+			<input type="button" value="OK" onclick="login(fm.usr.value,fm.pwd.value)">
+		</form>
+	</div><!-- /password -->
+
+	<div role="main" class="ui-content" align=center>
+		<font size=4>Please select an order menu below:</font>
+		<p><a href="#combo" class="ui-btn ui-btn-inline" data-transition="flow" style="height:20px"><font size=3>Today's combo</font></a>
+		   <a href="#drinks" class="ui-btn ui-btn-inline" data-transition="flow" style="height:20px"><font size=3>Beverage</font></a>
+		   <a href="#dessert" class="ui-btn ui-btn-inline" data-transition="flow" style="height:20px"><font size=3>Dessert</font></a></P>
+		<br>
+		<p>
+		<img src=http://www.citypassguide.com/sites/default/files/styles/slideshow/public/gallery-food/HN-Food-DragonChineseRestaurant1.jpg?itok=v7yTLYda width=400>
+		</p>
+		<audio controls autoplay=true>
+			<source src="Chaconne.mp3" type="audio/mpeg">
+		</audio>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>PAPA heals your tummy~~~</h4>
+	</div><!-- /footer -->
+	
+	<!-- The following is the nevagation bar-->
+	<div data-role="navbar" data-iconpos="left">
+		<ul>
+			<li><a href="#Cooking PAPA" data-icon="search" data-transition="fade">Home</a></li>
+			<li><a data-icon="check" class="ui-btn-active" data-transition="fade" onclick="showMessage()">Ask for assist~</a></li>
+			<li><a href="#payment" data-icon="shop" data-transition="fade">Payment</a></li>
+		</ul>
+	</div><!-- /navbar -->
+	
+</div><!-- /page -->
+
+
+<!-- Start of Today's combo page -->
+<div data-role="page" id="combo">
+
+	<div data-role="header">
+		<h1>Special Combo Offer</h1>
+	</div><!-- /header -->
+
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a" >
+				<p>Set A - Wonton noodle $25</p>
+				<img src="edited picture/WontonNoodles.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('SET A - Wonton noodle', 25, 1)">Add</button>
+				</div>			
+			</div>
+		</div>	
+		
+		<div class="ui-block-b">
+			<div class="ui-bar ui-bar-a">
+				<p>Set B - Japanese Lunch $50</p>
+				<img src="edited picture/Japanese lunch.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('SET B - Japanese Lunch', 50, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+		<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a">
+				<p>Set C - Steak $80</p>
+				<img src="edited picture/Steak.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('SET C - Steak', 80, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+		<div class="ui-block-b">
+			<div class="ui-bar ui-bar-a">
+				<p>Set D - Salad $28</p>
+				<img src="edited picture/Salad.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('SET D - Salad', 28, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+		<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a">
+				<p>Set E - Baby Ribs $150</p><br>
+				<img src="edited picture/Ribs.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('SET E - Baby Ribs', 150, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+		<div class="ui-block-b">
+			<div class="ui-bar ui-bar-a">
+				<p>Set F - Fish and Chips $40</p>
+				<img src="edited picture/Fish and Chips.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('SET F - Fish and Chips', 40, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+	</div><!-- /grid-a -->
+
+	<div role="main" class="ui-content" align=center>
+		<p><a href="#drinks" class="ui-btn ui-btn-inline" data-transition="slideup" style="height:20px"><font size=3>Next</font></a></p>
+	</div>
+	<!-- The following is the nevagation bar-->
+	<div data-role="navbar" data-iconpos="left">
+		<ul>
+			<li><a href="#Cooking PAPA" data-icon="search" data-transition="fade">Home</a></li>
+			<li><a href="#" data-icon="check" class="ui-btn-active" data-transition="fade" onclick="showMessage()">Ask for assist~</a></li>
+			<li><a href="#payment" data-icon="shop" data-transition="fade">Payment</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- End first combo page-->
+	
+
+<!-- Start of beverage page -->
+<div data-role="page" id="drinks">
+
+	<div data-role="header">
+		<h1>Beverage</h1>
+	</div><!-- /header -->
+	
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a" >
+				<p>Coca-cola $8</p>
+				<img src="edited picture/Coca-cola.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('Coca-cola', 8, 1)">Add</button>
+				</div>			
+			</div>
+		</div>	
+		
+		<div class="ui-block-b">
+			<div class="ui-bar ui-bar-a">
+				<p>Beer $20</p>
+				<img src="edited picture/Beer.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('Beer', 20, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+		<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a">
+				<p>Milk $12</p>
+				<img src="edited picture/Milk.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('Milk', 12, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+		<div class="ui-block-b">
+			<div class="ui-bar ui-bar-a">
+				<p>Cappuccino $30</p>
+				<img src="edited picture/Cappuccino.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('Cappuccino', 30, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+				<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a">
+				<p>Orange Juice $12</p>
+				<img src="edited picture/Orange Juice.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('Orange Juice', 12, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+	</div><!-- /drinks grid -->
+
+	<div role="main" class="ui-content" align=center>
+	<p><a href="#dessert" class="ui-btn ui-btn-inline" data-transition="slideup" style="height:20px"><font size=3>Next</font></a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Thank you~~~</h4>
+	</div><!-- /footer -->
+	<!-- The following is the nevagation bar-->
+	<div data-role="navbar" data-iconpos="left">
+		<ul>
+			<li><a href="#Cooking PAPA" data-icon="search" data-transition="fade">Home</a></li>
+			<li><a data-icon="check" class="ui-btn-active" data-transition="fade" onclick="showMessage()">Ask for assist~</a></li>
+			<li><a href="#payment" data-icon="shop" data-transition="fade">Payment</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /End of beverage page -->
+
+
+<!-- Start of dessert page -->
+<div data-role="page" id="dessert">
+
+	<div data-role="header">
+		<h1>Dessert</h1>
+	</div><!-- /header -->
+	
+		<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a" >
+				<p>Cupcake $45</p>
+				<img src="edited picture/Cupcake.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('Cupcake', 45, 1)">Add</button>
+				</div>			
+			</div>
+		</div>	
+		
+		<div class="ui-block-b">
+			<div class="ui-bar ui-bar-a">
+				<p>Ice-cream $40</p>
+				<img src="edited picture/Ice-cream.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('Ice-cream', 40, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+		<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a">
+				<p>Mooncake $45</p>
+				<img src="edited picture/Mooncake.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('Mooncake', 45, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+		<div class="ui-block-b">
+			<div class="ui-bar ui-bar-a">
+				<p>Pudding $35</p>
+				<img src="edited picture/Pudding.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('Pudding', 35, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+				<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a">
+				<p>Cake $200</p>
+				<img src="edited picture/Cake.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-plus" onclick="shoppingMachine.addItem('Cake', 200, 1)">Add</button>
+				</div>	
+			</div>
+		</div>
+	</div><!-- /drinks grid -->
+
+	<div role="main" class="ui-content" align=center>
+		<p><a href="#payment" class="ui-btn ui-btn-inline" data-transition="slideup" style="height:20px"><font size=3>Finish</font></a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Thank you~~~</h4>
+	</div><!-- /footer -->
+	
+	<!-- The following is the nevagation bar-->
+	<div data-role="navbar" data-iconpos="left">
+		<ul>
+			<li><a href="#Cooking PAPA" data-icon="search" data-transition="fade">Home</a></li>
+			<li><a data-icon="check" class="ui-btn-active" data-transition="fade" onclick="showMessage()">Ask for assist~</a></li>
+			<li><a href="#payment" data-icon="shop" data-transition="fade">Payment</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /End of dessert page-->
+
+<!-- Start of Manager and Chief page -->
+<div data-role="page" id="PAPA">
+
+	<div data-role="header">
+		<h1>Cooking Process</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<table id="displayOrderList" align="center">
+			
+		</table>
+		<script>
+			managerMachine.getOrderList();
+		</script>
+	</div><!-- /content -->
+	
+	<div role="main" class="ui-content" align=center>
+		<p><a href="#Cooking PAPA" class="ui-btn ui-btn-inline" data-transition="slideup" style="height:20px"><font size=3>Home page</font></a></p>
+	</div>
+
+	<div data-role="footer">
+		<h4>Smile~~~</h4>
+	</div><!-- /footer -->
+	
+	<!-- The following is the nevagation bar-->
+	<div data-role="navbar" data-iconpos="left">
+		<ul>
+			<li><a href="#Cooking PAPA" data-icon="search" data-transition="fade">Home</a></li>
+			<li><a href="#payment" data-icon="shop" data-transition="fade">Payment</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /End of manager and chief page-->
+
+<!-- Payment page -->
+<div data-role="page" id="payment">
+
+	<div data-role="header">
+		<h1>Your Order</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<table id="displayShoppingList" align="center">
+		</table>
+		<p id="displayTotalPrice" align="center"></p>
+		<script>
+			shoppingMachine.getShoppingList();
+		</script>
+		<p align="center"><a href="#Cooking PAPA" class="ui-btn ui-btn-inline" data-transition="flow" style="height:20px"><font size=3>Select More!</font></a>
+		<p align="center"><a href="#paymethod" class="ui-btn ui-btn-inline" data-transition="flow" style="height:20px"><font size=3>Pay now!</font></a></P>
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Thank you~~~</h4>
+	</div><!-- /footer -->
+	
+	<!-- The following is the nevagation bar-->
+	<div data-role="navbar" data-iconpos="left">
+		<ul>
+			<li><a href="#Cooking PAPA" data-icon="search" data-transition="fade">Home</a></li>
+			<li><a data-icon="check" class="ui-btn-active" data-transition="fade" onclick="showMessage()">Ask for assist~</a></li>
+			<li><a href="#payment" data-icon="shop" data-transition="fade">Payment</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /End of manager and chief page-->
+
+</div><!-- /payment page-->
+
+<!-- Start of paymethod page -->
+<div data-role="page" id="paymethod">
+
+	<div data-role="header">
+		<h1>Paying method</h1>
+	</div><!-- /header -->
+	
+		<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a" >
+				<p>Cash</p>
+				<img src="edited picture/Cash.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<p><a href="#thankyou" class="ui-btn ui-btn-inline" data-transition="slideup" style="height:20px" onclick="shoppingMachine.sendShoppingList()"><font size=3>Pay</font></a></p>				</div>			
+			</div>
+		</div>	
+		
+		<div class="ui-block-b">
+			<div class="ui-bar ui-bar-a">
+				<p>EPS</p>
+				<img src="edited picture/EPS.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<p><a href="#thankyou" class="ui-btn ui-btn-inline" data-transition="slideup" style="height:20px" onclick="shoppingMachine.sendShoppingList()"><font size=3>Pay</font></a></p>				</div>	
+			</div>
+		</div>
+		<div class="ui-block-a">
+			<div class="ui-bar ui-bar-a">
+				<p>Octopus</p>
+				<img src="edited picture/Octopus.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<p><a href="#thankyou" class="ui-btn ui-btn-inline" data-transition="slideup" style="height:20px" onclick="shoppingMachine.sendShoppingList()"><font size=3>Pay</font></a></p>				</div>	
+			</div>
+		</div>
+		<div class="ui-block-b">
+			<div class="ui-bar ui-bar-a">
+				<p>Google wallet</p>
+				<img src="edited picture/Google Wallet.jpg" width=90% height=60%>
+				<div class="ui-block-a">
+					<label for="grid-select-2" class="ui-hidden-accessible">Select</label>
+					<p><a href="#thankyou" class="ui-btn ui-btn-inline" data-transition="slideup" style="height:20px" onclick="shoppingMachine.sendShoppingList()"><font size=3>Pay</font></a></p>				</div>	
+			</div>
+		</div>
+	</div><!-- /paymethod grid -->
+
+	<div data-role="footer">
+		<h4>Thank you~~~</h4>
+	</div><!-- /footer -->
+	
+	<!-- The following is the nevagation bar-->
+	<div data-role="navbar" data-iconpos="left">
+		<ul>
+			<li><a href="#Cooking PAPA" data-icon="search" data-transition="fade">Home</a></li>
+			<li><a data-icon="check" class="ui-btn-active" data-transition="fade" onclick="showMessage()">Ask for assist~</a></li>
+			<li><a href="#payment" data-icon="shop" data-transition="fade">Payment</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /End of paymethod page-->
+
+</div><!-- /payment page-->
+
+<!-- Start of Thank you page -->
+<div data-role="page" id="thankyou" align="center">
+
+	<div data-role="header">
+		<h1>Cooking PAPA~</h1>
+	</div><!-- /header -->
+	
+	<h1>Thank you for coming~ Hope you enjoy today~</h1>
+	<p><img src="edited picture/Thank you.jpg" width=800></p>
+	
+	<div data-role="footer">
+		<h4>Thank you~~~</h4>
+	</div><!-- /footer -->
+	
+	<!-- The following is the nevagation bar-->
+	<div data-role="navbar" data-iconpos="left">
+		<ul>
+			<li><a href="#Cooking PAPA" data-icon="search" data-transition="fade">Home</a></li>
+			<li><a data-icon="check" class="ui-btn-active" data-transition="fade" onclick="showMessage()">Ask for assist~</a></li>
+			<li><a href="#payment" data-icon="shop" data-transition="fade">Payment</a></li>
+		</ul>
+	</div><!-- /navbar -->
+</div><!-- /End of paymethod page-->
+</body>
